@@ -1,0 +1,49 @@
+/*==================== Tailwind setup ====================*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*==================== FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*==================== BASE ====================*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*==================== tailwind Base change ====================*/
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-titleColor font-semibold dark:text-darkTitleColor;
+  }
+  img {
+    @apply max-w-full h-auto;
+  }
+  section {
+    padding: 2rem 0 4rem;
+  }
+}
+
+/*==================== tailwind My components ====================*/
+@layer components {
+  .section__title {
+    @apply text-titleColor dark:text-darkTitleColor text-2xl;
+  }
+
+  .section__subtitle {
+    @apply text-titleColor dark:text-darkTitleColor text-xl;
+  }
+  .section__content {
+    @apply text-textColor dark:text-darkTextColor text-base;
+  }
+}
