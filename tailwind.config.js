@@ -5,6 +5,13 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      // padding: {
+      //   DEFAULT: "1rem",
+      //   sm: "1rem",
+      //   lg: "1.5rem",
+      //   xl: "1.5rem",
+      //   "2xl": "2rem",
+      // },
     },
     extend: {
       fontFamily: {

@@ -30,7 +30,7 @@ html {
     @apply max-w-full h-auto;
   }
   section {
-    padding: 2rem 0 4rem;
+    padding: 2rem 1rem 4rem;
   }
 }
 
