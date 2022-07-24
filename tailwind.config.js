@@ -14,6 +14,39 @@ module.exports = {
       // },
     },
     extend: {
+      keyframes: {
+        topBounce: {
+          "0%,100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-25px)" },
+        },
+        shake: {
+          "10%,90%": { transform: "translate3d(-1px, 0, 0)" },
+          "20%,80%": { transform: "translate3d(2px, 0, 0)" },
+          "30%,50%,70%": { transform: "translate3d(-4px, 0, 0)" },
+          "40%,60%": { transform: "translate3d(4px, 0, 0)" },
+        },
+      },
+      animation: {
+        topBounce: "topBounce 3s ease-in-out infinite",
+        shake: "shake 1s cubic-bezier(0,.07,0,.97) 0.5s infinite",
+      },
+      animationDelay: {
+        2000: "2000ms",
+      },
+      animationDuration: {
+        2000: "2000ms",
+        2500: "2500ms",
+        3000: "3000ms",
+        3500: "3500ms",
+        4000: "4000ms",
+        5000: "5000ms",
+      },
+      animationIteration: {
+        "10x": "10",
+      },
+      animationTiming: {
+        cubic: "cubic-bezier(0, 0, 0.2, 1)",
+      },
       fontFamily: {
         popins: ["Poppins", "sans-serif"],
       },
@@ -31,10 +64,13 @@ module.exports = {
         textColor: "hsl(250, 8%, 45%)",
         textColorLight: "hsl(250, 8%, 65%)",
         inputColor: "hsl(250, 70%, 96%)",
-        bodyColor: "hsl(250, 60%, 99%)",
+        bodyColor2: "hsl(250, 60%, 99%)",
+        bodyColor: "rgb(237, 242, 248)",
         containerColor: "#fff",
         scrollBarColor: "hsl(250, 12%, 90%)",
         scrollThumbColor: "hsl(250, 12%, 80%)",
+        animGreen: "#06d79c",
+        animOrange: "#ff9c07",
 
         /*"HSL Dark color mode */
         darkFirstColorSecond: "hsl(250, 30%, 8%)",
@@ -48,5 +84,14 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  variants: {
+    animationDelay: ["responsive"],
+    animationDuration: ["responsive"],
+    animationIteration: ["responsive"],
+    animationTiming: ["responsive"],
+    animationDirection: ["responsive"],
+    animationFillMode: ["responsive"],
+    animationPlayState: ["responsive"],
+  },
+  plugins: [require("tailwindcss-animation")],
 };

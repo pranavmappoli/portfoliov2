@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 /*==================== FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap");
 
 /*==================== BASE ====================*/
 * {
@@ -37,11 +37,10 @@ html {
 /*==================== tailwind My components ====================*/
 @layer components {
   .section__title {
-    @apply text-titleColor dark:text-darkTitleColor text-2xl;
+    @apply text-titleColor dark:text-darkTitleColor text-6xl font-bold;
   }
-
   .section__subtitle {
-    @apply text-titleColor dark:text-darkTitleColor text-xl;
+    @apply text-titleColor dark:text-darkTitleColor text-3xl font-medium;
   }
   .section__content {
     @apply text-textColor dark:text-darkTextColor text-base;
