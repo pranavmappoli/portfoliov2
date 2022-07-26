@@ -25,7 +25,10 @@ function Heroimg() {
       <div className="absolute -right-10 -bottom-4">
         <SquareAnim></SquareAnim>
       </div>
-      <div className="w-[50%] h-[50%]">
+      <div
+        onClick={rotorActivate}
+        className="w-[50%] h-[50%] z-10 cursor-pointer "
+      >
         <svg
           viewBox="0 0 395 395"
           fill="none"
@@ -50,11 +53,6 @@ function Heroimg() {
           />
         </svg>
       </div>
-      {/* button cover */}
-      <div
-        onClick={rotorActivate}
-        className=" cursor-pointer absolute  w-[calc(50%+10%)] h-[calc(50%+10%)] top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-transparent z-10"
-      ></div>
 
       {/* icons round border */}
 
