@@ -14,7 +14,7 @@
   margin: 0;
 }
 section {
-  @apply mt-16;
+  @apply pt-4;
 }
 html {
   scroll-behavior: smooth;

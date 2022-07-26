@@ -15,11 +15,6 @@ module.exports = {
     },
     extend: {
       keyframes: {
-        "reverse-spin": {
-          from: {
-            transform: "rotate(360deg)",
-          },
-        },
         topBounce: {
           "0%,100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-25px)" },
@@ -34,7 +29,6 @@ module.exports = {
       animation: {
         topBounce: "topBounce 3s ease-in-out infinite",
         shake: "shake 1s cubic-bezier(0,.07,0,.97) 0.5s infinite",
-        "spin-reverse": "reverse-spin 1s linear infinite",
       },
       animationDelay: {
         2000: "2000ms",

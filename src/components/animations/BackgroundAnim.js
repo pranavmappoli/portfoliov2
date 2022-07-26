@@ -1,5 +1,5 @@
 import React from "react";
-import CodeIconAnim from "./CodeIconAnim2";
+import CodeIconAnim from "./CodeIconAnim";
 
 const BackgroundAnimation = () => (
   <div className="relative">

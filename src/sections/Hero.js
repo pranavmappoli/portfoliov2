@@ -7,19 +7,15 @@ import SocialMedia from "../components/SocialMedia";
 // import Heroimg from "../components/Heroimg";
 import RectangleAnim from "../components/animations/RectangleAnim";
 import Heroimg from "../components/Heroimg";
-import Navbar from "../components/Navbar";
 
 function Hero() {
   return (
-    // pt-10 is temp padding
-    <section className=" relative h-screen  mt-0">
-      {/* Navbar */}
-      <Navbar></Navbar>
+    <section className=" relative h-screen">
       {/* rectangle animation */}
       <RectangleAnim></RectangleAnim>
       {/* square animation */}
 
-      <div className="container  relative bg-body ">
+      <div className="container  relative bg-body  overflow-hidden h-full w-full">
         {/* Main flex box */}
         <div className="flex relative flex-col items-center sm:flex-row  flex-grow-[1] justify-center">
           {/* backround anim */}
@@ -64,7 +60,7 @@ function Hero() {
             </div>
           </div>
           {/* hero image */}
-          <div className="pt-16 sm:pt-0">
+          <div className="pt-16 sm:pt-0 ">
             <Heroimg></Heroimg>
           </div>
         </div>
