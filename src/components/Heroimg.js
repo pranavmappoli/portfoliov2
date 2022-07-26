@@ -10,41 +10,24 @@ import {
 } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io5";
 import { TbBrandJavascript } from "react-icons/tb";
+import SquareAnim from "./animations/SquareAnim";
 
 function Heroimg() {
   const [rotor, setRotor] = useState(true);
-  const [containerWidth, setContainerWidth] = useState(0);
-  const ref = useRef();
-
-  useEffect(() => {
-    console.log(containerWidth);
-    setContainerWidth(~~(+ref.current.offsetWidth / 2));
-  }, [ref.current]);
 
   const rotorActivate = () => {
     setRotor((prev) => !prev);
   };
 
   return (
-    <div ref={ref} className="flex relative items-center justify-center">
-      <div
-        className={
-          (rotor &&
-            `h-full w-full animate-spin animation-duration-5000 opacity-100 `) ||
-          (!rotor && `opacity-0 h-full w-full`)
-        }
-      >
-        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-          <path
-            fill="#aba5a5"
-            d="M256 16c-30 0-50 20-50 40 0 20.478 10.487 33.113 22.063 52.625-20.646 3.89-39.81 11.992-56.532 23.406-5.608-21.973-7.116-38.335-21.593-52.81-14.14-14.143-42.443-14.152-63.656 7.06-21.212 21.214-21.204 49.515-7.06 63.657 14.476 14.478 30.837 15.985 52.81 21.594-11.413 16.724-19.516 35.887-23.405 56.532C89.113 216.488 76.478 206 56 206c-20 0-40 20-40 50s20 50 40 50c20.478 0 33.113-10.487 52.625-22.063 3.89 20.646 11.992 39.81 23.406 56.532-21.973 5.608-38.335 7.116-52.81 21.592-14.143 14.142-14.152 42.444 7.06 63.657 21.214 21.212 49.515 21.204 63.657 7.06 14.478-14.476 15.985-30.837 21.594-52.81 16.724 11.413 35.887 19.516 56.532 23.405C216.488 422.887 206 435.522 206 456c0 20 20 40 50 40s50-20 50-40c0-20.478-10.487-33.113-22.063-52.625 20.646-3.89 39.81-11.992 56.532-23.406 5.608 21.973 7.116 38.335 21.592 52.81 14.142 14.143 42.444 14.152 63.657-7.06 21.212-21.214 21.204-49.515 7.06-63.658-14.476-14.477-30.837-15.984-52.81-21.593 11.413-16.724 19.516-35.887 23.405-56.533C422.887 295.512 435.522 306 456 306c20 0 40-20 40-50s-20-50-40-50c-20.478 0-33.113 10.487-52.625 22.063-3.89-20.646-11.992-39.81-23.406-56.532 21.973-5.608 38.335-7.116 52.81-21.593 14.143-14.14 14.152-42.443-7.06-63.656-21.214-21.212-49.515-21.204-63.658-7.06-14.477 14.476-15.984 30.837-21.593 52.81-16.724-11.413-35.887-19.516-56.533-23.405C295.512 89.113 306 76.478 306 56c0-20-20-40-50-40zm0 180c16.568 0 31.58 6.705 42.438 17.563C309.294 224.42 316 239.433 316 256c0 16.568-6.705 31.58-17.563 42.438C287.58 309.294 272.567 316 256 316c-16.568 0-31.58-6.705-42.438-17.563C202.706 287.58 196 272.567 196 256c0-16.568 6.705-31.58 17.563-42.438C224.42 202.706 239.433 196 256 196z"
-          />
-        </svg>
+    <div className="w-80 relative h-80 flex justify-center items-center ">
+      {/* Square animation */}
+      <div className="absolute -right-10 -bottom-4">
+        <SquareAnim></SquareAnim>
       </div>
-
-      <div className="  rounded-full absolute w-[calc(50%+15%)] h-[calc(50%+15%)] top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <div className="w-[50%] h-[50%]">
         <svg
-          viewBox="0 0 394 395"
+          viewBox="0 0 395 395"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
@@ -73,119 +56,81 @@ function Heroimg() {
         className=" cursor-pointer absolute  w-[calc(50%+10%)] h-[calc(50%+10%)] top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-transparent z-10"
       ></div>
 
+      {/* icons round border */}
+
+      <div
+        className={
+          rotor
+            ? ` absolute w-[87%] h-[87%]  rounded-full border-[1px] border-firstColor opacity-20`
+            : `opacity-0`
+        }
+      ></div>
+
       {/* icons */}
       <div
         className={
           rotor
-            ? `w-full h-full absolute left-0 top-0  animate-spin animation-duration-5000`
+            ? ` w-[100%]  h-[100%]     absolute animate-spin animation-duration-7000`
             : `opacity-0`
         }
       >
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*0)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*0)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-orange-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-orange-500">
             <SiHtml5></SiHtml5>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*1)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*1)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-blue-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-blue-500">
             <SiReact></SiReact>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*2)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*2)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-yellow-300">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-yellow-300">
             <TbBrandJavascript></TbBrandJavascript>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*3)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*3)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-green-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-green-500">
             <SiMongodb></SiMongodb>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*4)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*4)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-blue-300 pl-0 sm:pl-1">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-blue-500 pl-0 sm:pl-1">
             <SiCss3></SiCss3>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*5)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*5)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-white md:pl-1">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-white ">
             <SiGithub></SiGithub>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*6)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*6)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-green-600">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-green-600">
             <IoLogoNodejs></IoLogoNodejs>
           </div>
         </div>
         <div
-          style={{ transformOrigin: `${containerWidth - 13}px` }}
-          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-xl md:text-3xl lg:text-4xl rounded-full sm:h-8  rotate-[calc((360deg/8)*7)]`}
+          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*7)]`}
         >
-          <div className="flex items-center justify-center w-full h-full  text-blue-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-blue-500">
             <SiPython></SiPython>
           </div>
         </div>
       </div>
-      {/* <div
-        className={
-          (rotor &&
-            ` absolute left-1/2 top-1/2 -translate-x-1/2 animate-spin animation-duration-3500 opacity-100`) ||
-          (!rotor && `opacity-0`)
-        }
-      >
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*0)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*1)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*2)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*3)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*4)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*5)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*6)]`}
-        ></div>
-        <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 text-2xl md:text-3xl lg:text-4xl rounded-full sm:h-8 bg-red-900 rotate-[calc((360deg/8)*7)]`}
-        ></div>
-      </div> */}
     </div>
   );
 }

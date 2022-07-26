@@ -1,7 +1,8 @@
 import React from "react";
+import CodeIconAnim from "./CodeIconAnim";
 
 const BackgroundAnimation = () => (
-  <div>
+  <div className="relative">
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -359,6 +360,9 @@ const BackgroundAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
+    <div className="absolute left-1/2 top-1/2   -translate-x-1/2 -translate-y-1/2">
+      <CodeIconAnim></CodeIconAnim>
+    </div>
   </div>
 );
 

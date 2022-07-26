@@ -13,7 +13,9 @@
   padding: 0;
   margin: 0;
 }
-
+section {
+  @apply pt-4;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -29,8 +31,9 @@ html {
   img {
     @apply max-w-full h-auto;
   }
-  section {
-    padding: 2rem 1rem 4rem;
+
+  .container {
+    @apply flex  justify-center  items-stretch p-8 p-8 lg:p-20 lg:p-20;
   }
 }
 

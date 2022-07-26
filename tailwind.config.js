@@ -40,6 +40,7 @@ module.exports = {
         3500: "3500ms",
         4000: "4000ms",
         5000: "5000ms",
+        7000: "7000ms",
       },
       animationIteration: {
         "10x": "10",
@@ -94,4 +95,8 @@ module.exports = {
     animationPlayState: ["responsive"],
   },
   plugins: [require("tailwindcss-animation")],
+  corePlugins: {
+    // ...
+    container: false,
+  },
 };

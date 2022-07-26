@@ -1,5 +1,15 @@
 import React, { useState, useRef, useEffect } from "react";
 import pranavimg from "../assets/images/pranav.jpg";
+import {
+  SiMongodb,
+  SiReact,
+  SiPython,
+  SiHtml5,
+  SiCss3,
+  SiGithub,
+} from "react-icons/si";
+import { IoLogoNodejs } from "react-icons/io5";
+import { TbBrandJavascript } from "react-icons/tb";
 
 function Heroimg() {
   const [rotor, setRotor] = useState(true);
@@ -20,8 +30,8 @@ function Heroimg() {
       <div
         className={
           (rotor &&
-            `h-full w-full animate-spin animation-duration-3500 opacity-100 z-50`) ||
-          (!rotor && `opacity-0`)
+            `h-full w-full animate-spin animation-duration-5000 opacity-100 `) ||
+          (!rotor && `opacity-0 h-full w-full`)
         }
       >
         <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
@@ -32,17 +42,14 @@ function Heroimg() {
         </svg>
       </div>
 
-      <div
-        onClick={rotorActivate}
-        className="rounded-full w-1/2 h-1/2 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-2"
-      >
+      <div className="  rounded-full absolute w-[calc(50%+15%)] h-[calc(50%+15%)] top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2">
         <svg
           viewBox="0 0 394 395"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           width="100%"
           height="100%"
-          className={!rotor ? `animate-shake` : ""}
+          className={!rotor ? `animate-shake ` : ""}
         >
           <defs>
             <pattern
@@ -60,48 +67,85 @@ function Heroimg() {
           />
         </svg>
       </div>
-      {/* icons */}
+      {/* button cover */}
+      <div
+        onClick={rotorActivate}
+        className=" cursor-pointer absolute  w-[calc(50%+10%)] h-[calc(50%+10%)] top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-transparent z-10"
+      ></div>
 
-      {/* <div
+      {/* icons */}
+      <div
         className={
-          (rotor &&
-            ` absolute left-1/2 top-1/2 -translate-x-1/2 animate-spin animation-duration-3500 opacity-100`) ||
-          (!rotor && `opacity-0`)
+          rotor
+            ? `w-full h-full absolute left-0 top-0  animate-spin animation-duration-5000`
+            : `opacity-0`
         }
       >
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*0)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*0)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-orange-500">
+            <SiHtml5></SiHtml5>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*1)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*1)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-blue-500">
+            <SiReact></SiReact>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*2)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*2)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-yellow-300">
+            <TbBrandJavascript></TbBrandJavascript>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*3)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*3)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-green-500">
+            <SiMongodb></SiMongodb>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*4)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*4)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-blue-500 pl-0 sm:pl-1">
+            <SiCss3></SiCss3>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*5)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*5)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-white md:pl-1">
+            <SiGithub></SiGithub>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*6)]`}
-        ></div>
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*6)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-green-600">
+            <IoLogoNodejs></IoLogoNodejs>
+          </div>
+        </div>
         <div
-          style={{ "transform-origin": `${containerWidth - 16}px` }}
-          className={`left-[15px] sm:left-[18px] right-0 top-1/2  -translate-y-1/2 absolute w-6 h-6 sm:w-8 sm:h-8 bg-red-900 rotate-[calc((360deg/8)*7)]`}
-        ></div>
-      </div> */}
+          style={{ transformOrigin: `${containerWidth - 15}px` }}
+          className={`left-[11px] sm:left-[15px] right-0 top-1/2  -translate-y-1/2 absolute w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*7)]`}
+        >
+          <div className="flex items-center justify-center w-full h-full  text-blue-500">
+            <SiPython></SiPython>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
