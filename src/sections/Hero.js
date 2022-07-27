@@ -10,7 +10,7 @@ import Heroimg from "../components/Heroimg";
 
 function Hero() {
   return (
-    <section className=" relative h-screen">
+    <section className=" relative h-screen mt-0 pt-2 sm:pt-0">
       {/* rectangle animation */}
       <RectangleAnim></RectangleAnim>
       {/* square animation */}
@@ -23,7 +23,7 @@ function Hero() {
             <BackgroundAnim></BackgroundAnim>
           </div>
           {/* hero headings flex box */}
-          <div className=" items-center sm:items-start flex gap-2 flex-col xl:gap-8 md:gap-4 w-full ">
+          <div className=" items-center sm:items-start flex gap-2 flex-col xl:gap-8 md:gap-4 w-full pt-2 sm:pt-0">
             <div className="flex gap-2">
               <TrangleAnim></TrangleAnim>
               <div className="text-titleColor dark:text-darkTitleColor text-2xl sm:text-3xl font-bold">
