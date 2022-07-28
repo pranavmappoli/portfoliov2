@@ -26,14 +26,10 @@ function Hero() {
           <div className=" items-center sm:items-start flex gap-2 flex-col xl:gap-8 md:gap-4 w-full pt-2 sm:pt-0">
             <div className="flex gap-2">
               <TrangleAnim></TrangleAnim>
-              <div className="text-titleColor dark:text-darkTitleColor text-2xl sm:text-3xl font-bold">
-                Hello,
-              </div>
+              <div className=" section__subtitle font-bold">Hello,</div>
             </div>
-            <div className="text-titleColor dark:text-darkTitleColor text-4xl sm:text-6xl font-bold">
-              I'am Pranav
-            </div>
-            <span className="text-titleColor dark:text-darkTitleColor text-xl sm:text-3xl font-bold sm:min-h-[5rem]">
+            <div className=" section__title">I'am Pranav</div>
+            <span className=" text-xl sm:text-3xl font-bold sm:min-h-[5rem]">
               <Typewriter
                 options={{
                   strings: [

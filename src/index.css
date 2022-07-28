@@ -40,12 +40,12 @@ html {
 /*==================== tailwind My components ====================*/
 @layer components {
   .section__title {
-    @apply text-titleColor dark:text-darkTitleColor text-6xl font-bold;
+    @apply text-titleColor dark:text-darkTitleColor text-4xl sm:text-6xl font-bold;
   }
   .section__subtitle {
-    @apply text-titleColor dark:text-darkTitleColor text-3xl font-medium;
+    @apply text-titleColor dark:text-darkTitleColor text-2xl sm:text-3xl font-medium;
   }
   .section__content {
-    @apply text-textColor dark:text-darkTextColor text-base;
+    @apply text-textColor dark:text-darkTextColor text-lg;
   }
 }
