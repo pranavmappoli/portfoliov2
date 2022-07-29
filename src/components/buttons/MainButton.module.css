@@ -9,7 +9,6 @@
 }
 
 .btn {
-  cursor: pointer;
   display: inline-block;
   background-color: #fff;
   padding: 1rem 2.5rem;
@@ -50,4 +49,9 @@
 .btn:hover::after {
   transform: scaleX(1.5) scaleY(1.2);
   opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    cursor: pointer;
+  }
 }

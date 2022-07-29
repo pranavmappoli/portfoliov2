@@ -7,10 +7,11 @@ import SocialMedia from "../components/SocialMedia";
 // import Heroimg from "../components/Heroimg";
 import RectangleAnim from "../components/animations/RectangleAnim";
 import Heroimg from "../components/Heroimg";
+import WavingHand from "../components/animations/WavingHand";
 
 function Hero() {
   return (
-    <section className=" relative h-screen mt-0 pt-2 sm:pt-0">
+    <section className=" relative h-screen mt-0 pt-4 sm:pt-0">
       {/* rectangle animation */}
       <RectangleAnim></RectangleAnim>
       {/* square animation */}
@@ -25,8 +26,8 @@ function Hero() {
           {/* hero headings flex box */}
           <div className=" items-center sm:items-start flex gap-2 flex-col xl:gap-8 md:gap-4 w-full pt-2 sm:pt-0">
             <div className="flex gap-2">
-              <TrangleAnim></TrangleAnim>
-              <div className=" section__subtitle font-bold">Hello,</div>
+              <div className=" section__subtitle font-bold">Hello</div>
+              <WavingHand></WavingHand>
             </div>
             <div className=" section__title">I'am Pranav</div>
             <span className=" text-xl sm:text-3xl font-bold sm:min-h-[5rem]">
@@ -56,7 +57,7 @@ function Hero() {
             </div>
           </div>
           {/* hero image */}
-          <div className="pt-16 sm:pt-0 ">
+          <div className="pt-8 sm:pt-0 ">
             <Heroimg></Heroimg>
           </div>
         </div>

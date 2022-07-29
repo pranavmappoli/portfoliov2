@@ -3,6 +3,7 @@ import { BiHome } from "react-icons/bi";
 import { BsPerson, BsTools } from "react-icons/bs";
 import { ImMenu4 } from "react-icons/im";
 import {
+  AiOutlineCloseCircle,
   AiOutlineTool,
   AiOutlineFundProjectionScreen,
   AiOutlineProject,
@@ -18,30 +19,36 @@ function Navbar() {
     setOpenNav((state) => !state);
   };
   return (
-    <div className="fixed px-4  flex justify-between items-center max-h-16 bottom-0 md:top-0 w-screen  z-50 bg-bodyColor dark:bg-darkBodyColor">
+    <div className="fixed pt-2 pb-4  flex justify-between items-center max-h-16 bottom-0 md:top-0 w-screen  z-50 bg-bodyColor dark:bg-darkBodyColor">
       {/* logo */}
-      <div className=" opacity-40 flex items-center justify-center font-bold text-4xl py-2 px-4">
+      <div className=" opacity-40 flex items-center justify-center font-bold text-4xl py-4 px-4">
         <SiWebmoney></SiWebmoney>
       </div>
+
       {/* Menu button */}
       <div
         onClick={navHandler}
-        className=" hover:text-firstColor cursor-pointer font-bold text-4xl  py-2 px-8  flex items-center justify-start md:hidden"
+        className="transition-all hover:text-firstColor opacity-80 md:cursor-pointer font-bold text-4xl  py-4 px-8  flex items-center justify-start md:hidden"
       >
-        <CgMenuGridO></CgMenuGridO>
+        {!openNav ? (
+          <CgMenuGridO></CgMenuGridO>
+        ) : (
+          <AiOutlineCloseCircle></AiOutlineCloseCircle>
+        )}
       </div>
+
       {/* nav list */}
       <div
         className={
           openNav
-            ? `md:static fixed  bottom-12 left-0 opacity-100 `
-            : "md:static fixed  bottom-12 left-0 opacity-0 md:opacity-100"
+            ? `md:static fixed  bottom-14 left-0 `
+            : "md:static md:block hidden  bottom-14 left-0 "
         }
       >
-        <ul className="md:h-full md:w-full w-screen grid grid-cols-3 gap-x-4 justify-center items-center shadow-inner font-semibold md:grid-cols-6  h-[30vh] pl-4 pr-4 bg-bodyColor dark:bg-darkBodyColor rounded-t-2xl md:rounded-none md:shadow-none">
+        <ul className="z-50 md:h-full md:w-full w-screen grid grid-cols-3 gap-x-4 justify-center items-center shadow-inner font-medium md:font-semibold md:grid-cols-6  h-[30vh] pl-4 pr-4 bg-bodyColor dark:bg-darkBodyColor rounded-t-2xl md:rounded-none md:shadow-none">
           <li>
             <a href="">
-              <div className="hover:text-firstColor transition-all flex flex-col gap-1 md:flex-row items-center justify-center">
+              <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
                 <div className=" flex  items-center justify-center font-bold md:text-2xl text-4xl">
                   <BiHome></BiHome>
                 </div>
@@ -51,7 +58,7 @@ function Navbar() {
           </li>
           <li>
             <a href="">
-              <div className="hover:text-firstColor transition-all flex flex-col gap-1 md:flex-row items-center justify-center">
+              <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
                 <div className=" flex  items-center justify-center font-bold md:text-2xl text-4xl">
                   <BsPerson></BsPerson>
                 </div>
@@ -61,7 +68,7 @@ function Navbar() {
           </li>
           <li>
             <a href="">
-              <div className="hover:text-firstColor transition-all flex flex-col gap-1 md:flex-row items-center justify-center">
+              <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
                 <div className=" flex  items-center justify-center font-bold md:text-2xl text-4xl">
                   <BsTools></BsTools>
                 </div>
@@ -71,7 +78,7 @@ function Navbar() {
           </li>
           <li>
             <a href="">
-              <div className="hover:text-firstColor transition-all flex flex-col gap-1 md:flex-row items-center justify-center">
+              <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
                 <div className=" flex  items-center justify-center font-bold md:text-2xl text-4xl">
                   <AiOutlineFundProjectionScreen></AiOutlineFundProjectionScreen>
                 </div>
@@ -81,7 +88,7 @@ function Navbar() {
           </li>
           <li>
             <a href="">
-              <div className="hover:text-firstColor transition-all flex flex-col gap-1 md:flex-row items-center justify-center">
+              <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
                 <div className=" flex  items-center justify-center font-bold md:text-2xl text-4xl">
                   <TbCertificate></TbCertificate>
                 </div>
@@ -91,7 +98,7 @@ function Navbar() {
           </li>
           <li>
             <a href="">
-              <div className="hover:text-firstColor transition-all flex flex-col gap-1 md:flex-row items-center justify-center">
+              <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
                 <div className=" flex  items-center justify-center font-bold md:text-2xl text-4xl">
                   <IoGameControllerOutline></IoGameControllerOutline>
                 </div>

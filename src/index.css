@@ -36,6 +36,9 @@ html {
     @apply flex  justify-center  items-stretch p-8 p-8 lg:p-20 lg:p-20;
   }
 }
+a {
+  cursor: default;
+}
 
 /*==================== tailwind My components ====================*/
 @layer components {

@@ -5,7 +5,7 @@ import { Link } from "react-scroll";
 function MainButton(props) {
   return (
     <div
-      className={`${styles.btn__container} ${
+      className={` ${styles.btn__container} ${
         props.btn__animation && styles.btn__animation
       }  `}
     >

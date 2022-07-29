@@ -20,14 +20,14 @@ function Heroimg() {
   };
 
   return (
-    <div className="w-80 relative h-80 flex justify-center items-center ">
+    <div className="w-80 relative h-80 flex justify-center items-center">
       {/* Square animation */}
       <div className="absolute -right-10 -bottom-4">
         <SquareAnim></SquareAnim>
       </div>
       <div
         onClick={rotorActivate}
-        className="w-[50%] h-[50%] z-10 cursor-pointer "
+        className="w-[50%] h-[50%]  md:cursor-pointer z-40  "
       >
         <svg
           viewBox="0 0 395 395"
@@ -68,63 +68,63 @@ function Heroimg() {
       <div
         className={
           rotor
-            ? ` w-[100%]  h-[100%]     absolute animate-spin animation-duration-7000`
+            ? ` w-[100%]  h-[100%]    absolute animate-spin animation-duration-7000`
             : `opacity-0`
         }
       >
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*0)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*0)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-orange-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full     text-orange-500">
             <SiHtml5></SiHtml5>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*1)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*1)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-blue-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-blue-500">
             <SiReact></SiReact>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*2)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*2)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-yellow-300">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-yellow-300">
             <TbBrandJavascript></TbBrandJavascript>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*3)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*3)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-green-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-green-500">
             <SiMongodb></SiMongodb>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*4)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*4)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-blue-500 pl-0 sm:pl-1">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-blue-500 pl-0 sm:pl-1">
             <SiCss3></SiCss3>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*5)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*5)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-white ">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-white ">
             <SiGithub></SiGithub>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*6)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*6)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-green-600">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-green-600">
             <IoLogoNodejs></IoLogoNodejs>
           </div>
         </div>
         <div
-          className={`absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*7)]`}
+          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*7)]`}
         >
-          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full  text-blue-500">
+          <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-blue-500">
             <SiPython></SiPython>
           </div>
         </div>

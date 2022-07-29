@@ -24,7 +24,7 @@ function ThemeChanger() {
   return (
     <div
       onClick={changeTheme}
-      className="z-50 fixed -translate-y-1/2 top-1/2 right-0 flex justify-center items-center w-11 h-11 rounded-full dark:bg-firstColor bg-darkContainerColor cursor-pointer"
+      className="z-50 fixed -translate-y-1/2 top-1/2 right-0 flex justify-center items-center w-11 h-11 rounded-full dark:bg-firstColor bg-darkContainerColor md:cursor-pointer"
     >
       {dark && <FaSun className="text-xl text-white"></FaSun>}
       {!dark && <FaMoon className="text-xl text-white"></FaMoon>}

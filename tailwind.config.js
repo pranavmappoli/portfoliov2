@@ -14,6 +14,9 @@ module.exports = {
       // },
     },
     extend: {
+      transformOrigin: {
+        "top-3/4-3/4": "70% 70%",
+      },
       keyframes: {
         topBounce: {
           "0%,100%": { transform: "translateY(0)" },
@@ -25,10 +28,21 @@ module.exports = {
           "30%,50%,70%": { transform: "translate3d(-4px, 0, 0)" },
           "40%,60%": { transform: "translate3d(4px, 0, 0)" },
         },
+        waveAnimation: {
+          "  0%": { transform: "rotate( 0.0deg)" },
+          " 10%": { transform: "rotate(14.0deg)" },
+          " 20%": { transform: "rotate(-8.0deg)" },
+          " 30%": { transform: "rotate(14.0deg)" },
+          " 40%": { transform: "rotate(-4.0deg)" },
+          " 50%": { transform: "rotate(10.0deg)" },
+          " 60%": { transform: "rotate( 0.0deg)" },
+          "100%": { transform: "rotate( 0.0deg)" },
+        },
       },
       animation: {
         topBounce: "topBounce 3s ease-in-out infinite",
         shake: "shake 1s cubic-bezier(0,.07,0,.97) 0.5s infinite",
+        wavingHand: "waveAnimation 2.5s ease-in-out infinite",
       },
       animationDelay: {
         2000: "2000ms",
