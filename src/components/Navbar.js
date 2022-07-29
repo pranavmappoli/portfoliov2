@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { BiHome } from "react-icons/bi";
 import { BsPerson, BsTools } from "react-icons/bs";
 import { ImMenu4 } from "react-icons/im";
@@ -18,17 +19,22 @@ function Navbar() {
   const navHandler = () => {
     setOpenNav((state) => !state);
   };
+  // animations
+  const variants = {
+    open: { y: 0 },
+    closed: { y: "10%" },
+  };
   return (
     <div className="fixed pt-2 pb-4  flex justify-between items-center max-h-16 bottom-0 md:top-0 w-screen  z-50 bg-bodyColor dark:bg-darkBodyColor">
       {/* logo */}
-      <div className=" opacity-40 flex items-center justify-center font-bold text-4xl py-4 px-4">
+      <div className=" opacity-40 flex items-center justify-center font-bold text-4xl py-4 px-4 z-50">
         <SiWebmoney></SiWebmoney>
       </div>
 
       {/* Menu button */}
       <div
         onClick={navHandler}
-        className="transition-all hover:text-firstColor opacity-80 md:cursor-pointer font-bold text-4xl  py-4 px-8  flex items-center justify-start md:hidden"
+        className="transition-all z-50 hover:text-firstColor opacity-80 md:cursor-pointer font-bold text-4xl  py-4 px-8  flex items-center justify-start md:hidden"
       >
         {!openNav ? (
           <CgMenuGridO></CgMenuGridO>
@@ -38,14 +44,17 @@ function Navbar() {
       </div>
 
       {/* nav list */}
-      <div
+      <motion.div
         className={
           openNav
             ? `md:static fixed  bottom-14 left-0 `
             : "md:static md:block hidden  bottom-14 left-0 "
         }
+        animate={openNav ? "open" : "closed"}
+        variants={variants}
+        transition={{ duration: 0.3, ease: "easeIn" }}
       >
-        <ul className="z-50 md:h-full md:w-full w-screen grid grid-cols-3 gap-x-4 justify-center items-center shadow-inner font-medium md:font-semibold md:grid-cols-6  h-[30vh] pl-4 pr-4 bg-bodyColor dark:bg-darkBodyColor rounded-t-2xl md:rounded-none md:shadow-none">
+        <ul className="relative z-[49] md:h-full md:w-full w-screen grid grid-cols-3 gap-x-4 justify-center items-center shadow-inner font-medium md:font-semibold md:grid-cols-6  h-[30vh] pl-4 pr-4 bg-bodyColor dark:bg-darkBodyColor rounded-t-2xl md:rounded-none md:shadow-none">
           <li>
             <a href="">
               <div className="md:cursor-pointer md:hover:border-b-2 py-2 border-opacity-20  border-firstColor hover:text-firstColor transition-all flex flex-col gap-1 opacity-80 md:flex-row items-center justify-center">
@@ -107,7 +116,7 @@ function Navbar() {
             </a>
           </li>
         </ul>
-      </div>
+      </motion.div>
     </div>
   );
 }

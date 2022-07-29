@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import pranavimg from "../assets/images/pranav.jpg";
+import { motion } from "framer-motion";
 import {
   SiMongodb,
   SiReact,
@@ -17,6 +18,12 @@ function Heroimg() {
 
   const rotorActivate = () => {
     setRotor((prev) => !prev);
+  };
+
+  // animations
+  const variants = {
+    open: { transformOrigin: "500%", left: "0%" },
+    closed: { transformOrigin: "50%", left: "50%" },
   };
 
   return (
@@ -69,65 +76,89 @@ function Heroimg() {
         className={
           rotor
             ? ` w-[100%]  h-[100%]    absolute animate-spin animation-duration-7000`
-            : `opacity-0`
+            : ``
         }
       >
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*0)]`}
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*0)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full     text-orange-500">
             <SiHtml5></SiHtml5>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*1)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*1)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-blue-500">
             <SiReact></SiReact>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*2)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*2)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-yellow-300">
             <TbBrandJavascript></TbBrandJavascript>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*3)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*3)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-green-500">
             <SiMongodb></SiMongodb>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*4)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*4)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-blue-500 pl-0 sm:pl-1">
             <SiCss3></SiCss3>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*5)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*5)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-white ">
             <SiGithub></SiGithub>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*6)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*6)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-green-600">
             <IoLogoNodejs></IoLogoNodejs>
           </div>
-        </div>
-        <div
-          className={` absolute top-1/2 left-0  origin-[500%]  -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*7)]`}
+        </motion.div>
+        <motion.div
+          animate={rotor ? "open" : "closed"}
+          variants={variants}
+          transition={{ duration: 0.3, ease: "easeIn" }}
+          className={` absolute top-1/2 left-1/2    -translate-y-1/2 w-8 text-3xl lg:text-4xl rounded-full h-8  rotate-[calc((360deg/8)*7)]`}
         >
           <div className="flex items-center justify-center w-[150%] h-[150%] bg-[#aba5a5] rounded-full    text-blue-500">
             <SiPython></SiPython>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
