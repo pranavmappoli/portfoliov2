@@ -89,6 +89,7 @@ module.exports = {
         scrollThumbColor: "hsl(250, 12%, 80%)",
         animGreen: "#06d79c",
         animOrange: "#ff9c07",
+        leetcodeBorderColor: "hsla(250, 69%, 61%, 0.40)",
 
         /*"HSL Dark color mode */
         darkFirstColorSecond: "hsl(250, 30%, 8%)",

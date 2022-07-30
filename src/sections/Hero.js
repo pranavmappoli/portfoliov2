@@ -29,7 +29,7 @@ function Hero() {
               <div className=" section__subtitle font-bold">Hello</div>
               <WavingHand></WavingHand>
             </div>
-            <div className=" section__title text-left">I'am Pranav</div>
+            <div className=" section__title sm:text-left ">I'am Pranav</div>
             <span className=" text-xl sm:text-3xl font-bold sm:min-h-[5rem]">
               <Typewriter
                 options={{

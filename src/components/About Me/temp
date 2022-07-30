@@ -1,0 +1,19 @@
+import React from "react"; import { SiLeetcode } from "react-icons/si"; function
+LeetCode() { return (
+<div className="flex flex-col ">
+  {/* title */}
+  <div
+    className="flex justify-left items-center gap-1 section__section__contentTitle "
+  >
+    LeetCode
+    <span className="text-yellow-500 font-bold text-xl">
+      <SiLeetcode></SiLeetcode>
+    </span>
+  </div>
+  {/* main flex */}
+  <div className="flex  bg-red-500 ">
+    <div className="bg-green-500 w-[100%]  ">a</div>
+    <div className="bg-blue-500">progress bar</div>
+  </div>
+</div>
+); } export default LeetCode;

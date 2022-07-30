@@ -1,5 +1,6 @@
 import React from "react";
 import Story from "../components/About Me/Story";
+import LeetCode from "../components/About Me/LeetCode";
 
 function AboutMe() {
   return (
@@ -7,7 +8,7 @@ function AboutMe() {
       <div className="section__title">About Me</div>
       <div className="container">
         {/* Flex-Main */}
-        <div className="flex flex-col sm:flex-row w-screen sm:h-[95vh] ">
+        <div className="flex flex-col sm:flex-row w-screen sm:h-[95vh] gap-2 sm:gap-0">
           {/* flex box  1 */}
           <div className=" sm:w-[160%]  ">
             {/*  flex box about me */}
@@ -23,13 +24,12 @@ function AboutMe() {
           </div>
           {/*  flexbox 2 */}
           <div className=" flex flex-col gap-2  w-full">
-            {/* leetcode staus */}
             <div className="h-full bg-containerColor dark:bg-darkContainerColor sm:m-2 rounded-lg sm:shadow-lg p-2">
-              leetcode
+              {/* leetcode staus */}
+              <LeetCode></LeetCode>
             </div>
             {/* Github status */}
             <div className="h-full bg-containerColor dark:bg-darkContainerColor sm:m-2 rounded-lg sm:shadow-lg p-2">
-              {" "}
               github
             </div>
           </div>
