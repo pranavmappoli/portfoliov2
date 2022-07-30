@@ -33,7 +33,7 @@ html {
   }
 
   .container {
-    @apply flex  justify-center  items-stretch p-8 p-8 lg:p-20 lg:p-20;
+    @apply flex  justify-center  items-stretch p-2 lg:p-20;
   }
 }
 a {
@@ -43,12 +43,15 @@ a {
 /*==================== tailwind My components ====================*/
 @layer components {
   .section__title {
-    @apply text-titleColor dark:text-darkTitleColor text-4xl sm:text-6xl font-bold;
+    @apply text-titleColor dark:text-darkTitleColor text-4xl sm:text-6xl font-bold text-center w-full pb-4;
   }
   .section__subtitle {
     @apply text-titleColor dark:text-darkTitleColor text-2xl sm:text-3xl font-medium;
   }
+  .section__contentTitle {
+    @apply text-textColor dark:text-darkTextColor text-xl sm:text-2xl font-medium;
+  }
   .section__content {
-    @apply text-textColor dark:text-darkTextColor text-lg;
+    @apply text-textColor dark:text-darkTextColor text-base;
   }
 }

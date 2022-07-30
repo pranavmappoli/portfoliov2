@@ -3,10 +3,10 @@ import TrangleAnim from "../components/animations/TrangleAnim";
 import Typewriter from "typewriter-effect";
 import BackgroundAnim from "../components/animations/BackgroundAnim";
 import MainButton from "../components/buttons/MainButton";
-import SocialMedia from "../components/SocialMedia";
+import SocialMedia from "../components/Hero/SocialMedia";
 // import Heroimg from "../components/Heroimg";
 import RectangleAnim from "../components/animations/RectangleAnim";
-import Heroimg from "../components/Heroimg";
+import Heroimg from "../components/Hero/Heroimg";
 import WavingHand from "../components/animations/WavingHand";
 
 function Hero() {
@@ -16,7 +16,7 @@ function Hero() {
       <RectangleAnim></RectangleAnim>
       {/* square animation */}
 
-      <div className="container  relative bg-body  overflow-hidden h-full w-full">
+      <div className="container  relative bg-body  overflow-hidden h-full p-4 sm:p-16">
         {/* Main flex box */}
         <div className="flex relative flex-col items-center sm:flex-row  flex-grow-[1] justify-center">
           {/* backround anim */}
@@ -29,7 +29,7 @@ function Hero() {
               <div className=" section__subtitle font-bold">Hello</div>
               <WavingHand></WavingHand>
             </div>
-            <div className=" section__title">I'am Pranav</div>
+            <div className=" section__title text-left">I'am Pranav</div>
             <span className=" text-xl sm:text-3xl font-bold sm:min-h-[5rem]">
               <Typewriter
                 options={{

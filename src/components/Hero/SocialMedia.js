@@ -6,7 +6,7 @@ import { BsInstagram } from "react-icons/bs";
 
 function SocialMedia() {
   return (
-    <div className="absolute -left-[calc(2rem-5px)] top-1/3 sm:static flex flex-col sm:flex-row gap-2 mt-4 mb-4 ">
+    <div className="absolute -left-[calc(2rem-1rem)] top-1/3 sm:static flex flex-col sm:flex-row gap-2 mt-4 mb-4 ">
       <a
         className="group hover:bg-bodyColor hover:text-firstColor dark:hover:bg-darkBodyColor dark:hover:text-firstColor transition-all duration-300   text-white flex justify-center items-center w-8 h-8 rounded-full dark:bg-firstColor bg-darkContainerColor md:cursor-pointer"
         href="mailto:pranavmappoli@gmail.com"

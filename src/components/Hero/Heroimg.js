@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import pranavimg from "../assets/images/pranav.jpg";
+import pranavimg from "../../assets/images/pranav.jpg";
 import { motion } from "framer-motion";
 import {
   SiMongodb,
@@ -11,7 +11,7 @@ import {
 } from "react-icons/si";
 import { IoLogoNodejs } from "react-icons/io5";
 import { TbBrandJavascript } from "react-icons/tb";
-import SquareAnim from "./animations/SquareAnim";
+import SquareAnim from "../animations/SquareAnim";
 
 function Heroimg() {
   const [rotor, setRotor] = useState(true);

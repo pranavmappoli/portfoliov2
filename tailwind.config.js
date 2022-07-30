@@ -14,6 +14,9 @@ module.exports = {
       // },
     },
     extend: {
+      gridTemplateColumns: {
+        aboutGrid: "3fr 2fr",
+      },
       transformOrigin: {
         "top-3/4-3/4": "70% 70%",
       },
@@ -81,7 +84,7 @@ module.exports = {
         inputColor: "hsl(250, 70%, 96%)",
         bodyColor2: "hsl(250, 60%, 99%)",
         bodyColor: "rgb(237, 242, 248)",
-        containerColor: "#fff",
+        containerColor: "hsl(250, 60%, 99%)",
         scrollBarColor: "hsl(250, 12%, 90%)",
         scrollThumbColor: "hsl(250, 12%, 80%)",
         animGreen: "#06d79c",
