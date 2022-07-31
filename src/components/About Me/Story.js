@@ -12,7 +12,7 @@ function Story(props) {
       </div>
       <div className="story__content"></div>
       <span className="story__heading ">
-        <div className="section__contentTitle pb-2">
+        <div className="section__contentTitle pb-2 about__content">
           Hey, <span className="text-firstColor">I'am Pranav</span>{" "}
         </div>
       </span>

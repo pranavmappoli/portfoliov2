@@ -43,15 +43,18 @@ a {
 /*==================== tailwind My components ====================*/
 @layer components {
   .section__title {
-    @apply text-titleColor dark:text-darkTitleColor text-4xl sm:text-6xl font-bold text-center w-full pb-4;
+    @apply text-titleColor dark:text-darkTitleColor text-2xl sm:text-4xl md:text-6xl font-bold text-center w-full pb-4;
   }
   .section__subtitle {
-    @apply text-titleColor dark:text-darkTitleColor text-2xl sm:text-3xl font-medium;
+    @apply text-titleColor dark:text-darkTitleColor text-xl sm:text-2xl md:text-3xl font-medium;
   }
   .section__contentTitle {
-    @apply text-textColor dark:text-darkTextColor text-xl sm:text-2xl font-medium;
+    @apply text-textColor dark:text-darkTextColor text-lg sm:text-xl lg:text-2xl font-medium;
   }
   .section__content {
-    @apply text-textColor dark:text-darkTextColor text-base;
+    @apply text-textColor dark:text-darkTextColor text-sm lg:text-base;
+  }
+  .about__content {
+    @apply text-base md:text-xs lg:text-base;
   }
 }

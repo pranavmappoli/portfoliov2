@@ -8,15 +8,15 @@ function AboutMe() {
       <div className="section__title">About Me</div>
       <div className="container">
         {/* Flex-Main */}
-        <div className="flex flex-col sm:flex-row w-screen sm:h-[95vh] gap-2 sm:gap-0">
+        <div className="flex flex-col md:flex-row w-screen md:h-[95vh] gap-2 md:gap-0">
           {/* flex box  1 */}
-          <div className=" sm:w-[160%]  ">
+          <div className=" md:w-[160%]  ">
             {/*  flex box about me */}
             <div className="flex flex-col gap-2 w-full h-full ">
-              <div className="section__content bg-containerColor dark:bg-darkContainerColor sm:max-h-[30%] sm:m-2 rounded-lg sm:shadow-lg p-2 ">
+              <div className="section__content bg-containerColor dark:bg-darkContainerColor md:max-h-[30%] md:m-2 rounded-lg md:shadow-lg p-2 ">
                 <Story></Story>
               </div>
-              <div className="bg-containerColor dark:bg-darkContainerColor sm:h-full sm:m-2 rounded-lg sm:shadow-lg p-2">
+              <div className="bg-containerColor dark:bg-darkContainerColor md:h-full md:m-2 rounded-lg md:shadow-lg p-2">
                 other details Lorem ipsum dolor sit amet consectetur adipisici
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
               </div>
@@ -24,12 +24,12 @@ function AboutMe() {
           </div>
           {/*  flexbox 2 */}
           <div className=" flex flex-col gap-2  w-full">
-            <div className="h-full bg-containerColor dark:bg-darkContainerColor sm:m-2 rounded-lg sm:shadow-lg p-2">
+            <div className="h-full bg-containerColor dark:bg-darkContainerColor md:m-2 rounded-lg md:shadow-lg p-2">
               {/* leetcode staus */}
               <LeetCode></LeetCode>
             </div>
             {/* Github status */}
-            <div className="h-full bg-containerColor dark:bg-darkContainerColor sm:m-2 rounded-lg sm:shadow-lg p-2">
+            <div className="h-full bg-containerColor dark:bg-darkContainerColor md:m-2 rounded-lg md:shadow-lg p-2">
               github
             </div>
           </div>
