@@ -6,6 +6,9 @@ function LeetCode() {
   const [progressValue, setProgressValue] = useState(11.5);
   const [totalsolvedInterval, settotalsolvedInterval] = useState(null);
   const [totalSolved, setTotalSolve] = useState(0);
+  const rank = "161,831";
+  const badges = "2";
+  const Reputation = 1;
   const totalSolvedEndValue = 265;
   const totalQuestions = 2356;
   const speedSolved = 0;
@@ -60,16 +63,16 @@ function LeetCode() {
           transition={{ duration: 1.5, ease: "easeIn" }}
           className="w-[45%]  aspect-square rounded-full relative shadow-sm"
         >
-          <div className="flex items-center flex-col  justify-center w-[93%] section__content about__content  bg-containerColor dark:bg-darkContainerColor aspect-square rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div className="flex items-center flex-col  justify-center w-[93%]  about__content  bg-containerColor dark:bg-darkContainerColor aspect-square rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <span className="text-xl font-semibold ">{totalSolved}</span>
             <div className="h-[1px] w-[80%] bg-leetcodeBorderColor my-1"></div>
             <span className="  opacity-80 ">{totalQuestions}</span>
           </div>
         </motion.div>
         {/* bars */}
-        <div className=" w-full flex flex-col gap-4 md:gap-2 lg:gap-3 justify-center items-center">
+        <div className=" w-full flex flex-col gap-4 md:gap-2 lg:gap-3 justify-center items-center font-medium">
           {/* bar 1 */}
-          <div className="flex flex-col gap-1 w-full section__content about__content ">
+          <div className="flex flex-col gap-1 w-full  about__content ">
             {/* heading of bar */}
             <div className="flex justify-between items-end pb-2">
               <span>Easy</span>
@@ -96,7 +99,7 @@ function LeetCode() {
           </div>
 
           {/* bar 2 medium */}
-          <div className="flex flex-col gap-1 w-full section__content about__content ">
+          <div className="flex flex-col gap-1 w-full  about__content ">
             {/* heading of bar */}
             <div className="flex justify-between items-end pb-2">
               <span>Medium</span>
@@ -123,7 +126,7 @@ function LeetCode() {
           </div>
 
           {/* bar 3 hard */}
-          <div className="flex flex-col gap-1 w-full section__content about__content">
+          <div className="flex flex-col gap-1 w-full   about__content">
             {/* heading of bar */}
             <div className="flex justify-between items-end pb-2">
               <span>Hard</span>
@@ -149,6 +152,24 @@ function LeetCode() {
             </div>
           </div>
         </div>
+      </div>
+      {/* bottom flex */}
+      <div className="flex justify-between pt-4 container__content  about__content shadow-lg">
+        <div className="flex flex-col items-center justify-center gap-1 font-medium">
+          <span>Rank</span>
+          <span>{rank}</span>
+        </div>
+        <div className=" w-1  bg-leetcodeBorderColor opacity-20 "></div>
+        <div className="flex flex-col items-center justify-center gap-1 font-medium">
+          <span>Badges</span>
+          <span>{badges}</span>
+        </div>
+        <div className=" w-1  bg-leetcodeBorderColor opacity-20 "></div>
+        <div className="flex flex-col items-center justify-center gap-1 font-medium">
+          <span>Reputation</span>
+          <span>{Reputation}</span>
+        </div>
+        <div className=" w-1  bg-leetcodeBorderColor opacity-20 "></div>
       </div>
     </div>
   );

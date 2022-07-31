@@ -55,6 +55,6 @@ a {
     @apply text-textColor dark:text-darkTextColor text-sm lg:text-base;
   }
   .about__content {
-    @apply text-base md:text-xs lg:text-base;
+    @apply text-textColor dark:text-darkTextColor text-base md:text-xs lg:text-base;
   }
 }
